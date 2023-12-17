@@ -60,7 +60,7 @@ public class UsuarioController {
                     !usuario.getEmail().equalsIgnoreCase(usuarioDb.getEmail()) &&
                     service.porEmail(usuario.getEmail()).isPresent()) {
                 return ResponseEntity.badRequest()
-                        .body(Collections.singletonMap("mensaje", "Ya existe un usuario con ese email!"));
+                        .body(Collections.singletonMap("Mensaje", "Ya existe un usuario con ese email!!!"));
             }
 
             usuarioDb.setNombre(usuario.getNombre());
